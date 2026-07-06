@@ -1,70 +1,77 @@
 # Search Queries for Job Scraper
 
-<!-- SETUP: Customize these queries based on your skills, target roles, and location -->
-
 ## Search Sites
 
-Primary (Danish job market):
-- **jobindex.dk** - largest Danish job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: Denmark / your city)
-- **karriere.dk** - IDA's job board (engineering/science roles)
-- **jobfinder.dk** - another major Danish job board
-- **akademikernes.dk** - academic union job board
+Primary (US job market, country-agnostic tooling):
+- **linkedin-search skill** (`.agents/skills/linkedin-search/`) - built on LinkedIn's public jobs-guest endpoints, run with `-l "United States"` or a specific city
+- **linkedin.com/jobs** - direct LinkedIn search as a fallback
+- Company career pages (Greenhouse, Lever, Ashby, Workday boards) via direct `site:` Google searches for target companies
 
-Secondary (company career pages via Google):
-- Direct Google searches with `site:` filters for known target companies
+Note: the `jobbank-search`, `jobdanmark-search`, `jobindex-search`, and `jobnet-search` CLI tools in this repo are Denmark-specific and not relevant to Harsh's US search. Skip installing/using them; rely on `linkedin-search` and direct site searches instead.
+
+Secondary (H1B-specific verification, not scraping):
+- **myvisajobs.com** - historical sponsorship data by employer (verify against live postings, don't trust timestamps blindly)
+- **USCIS H1B Employer Data Hub** - official sponsorship filing history by employer
 
 ## Query Categories
 
-Queries are grouped by priority. Each query should be combined with your location terms (e.g. "Copenhagen", "Sjælland", "Hovedstaden") where the site supports it.
+Queries are grouped by priority. Location is "United States" broadly since Harsh is open to relocating anywhere; sponsorship likelihood matters more than geography.
 
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
+### Priority 1: Data Analyst / BI Analyst
 
-These match your strongest and most desired career direction.
-
-```
-site:jobindex.dk "[YOUR_PRIMARY_JOB_TITLE]" [YOUR_CITY]
-site:jobindex.dk "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE]" [YOUR_COUNTRY]
-```
-
-### Priority 2: [YOUR_DOMAIN_EXPERTISE]
-
-These match your domain expertise.
+These match his strongest and most desired career direction.
 
 ```
-site:jobindex.dk [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] OR [YOUR_REGION]
-site:jobindex.dk [YOUR_DOMAIN_KEYWORD_2] [YOUR_COUNTRY]
-site:linkedin.com/jobs [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] [YOUR_COUNTRY]
+site:linkedin.com/jobs "Data Analyst" United States
+site:linkedin.com/jobs "Business Intelligence Analyst" United States
+site:linkedin.com/jobs "BI Analyst" SQL Tableau United States
+linkedin-search -l "United States" -q "Data Analyst"
 ```
 
-### Priority 3: [YOUR_ADJACENT_ROLE_TYPE]
+### Priority 2: Data Engineer / Analytics Engineer
 
-Adjacent roles you could pivot into.
-
-```
-site:jobindex.dk "[YOUR_ADJACENT_TITLE_1]" [YOUR_KEY_SKILL] [YOUR_CITY]
-site:jobindex.dk "[YOUR_ADJACENT_TITLE_2]" [YOUR_KEY_SKILL] [YOUR_CITY]
-```
-
-### Priority 4: Broader Technical / Consulting
-
-Wider net for general technical roles.
+These match his growing domain expertise in pipelines and ETL.
 
 ```
-site:jobindex.dk [YOUR_KEY_SKILL] developer [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_KEY_SKILL] developer" [YOUR_CITY]
-site:jobindex.dk "technical consultant" [YOUR_DOMAIN] [YOUR_CITY]
+site:linkedin.com/jobs "Data Engineer" entry level OR junior United States
+site:linkedin.com/jobs "Analytics Engineer" SQL Python United States
+linkedin-search -l "United States" -q "Data Engineer"
 ```
+
+### Priority 3: Technical Product Manager / Product Analyst
+
+Adjacent roles leveraging his product management internship and pivot narrative.
+
+```
+site:linkedin.com/jobs "Technical Product Manager" data United States
+site:linkedin.com/jobs "Product Analyst" SQL United States
+linkedin-search -l "United States" -q "Product Analyst"
+```
+
+### Priority 4: Broader Analytics / Consulting
+
+Wider net for general technical/analytics roles.
+
+```
+site:linkedin.com/jobs "Data Analyst" OR "Analytics" new grad United States
+site:linkedin.com/jobs "technical consultant" analytics United States
+linkedin-search -l "United States" -q "Business Analyst"
+```
+
+## Target Companies to Monitor
+
+- Tech / SaaS: Tesla, OpenAI, Brex, Clay, Upgrade, Peregrine Technologies, Amigo AI, Goose, Omni
+- Retail / e-commerce / consumer: Etsy, Ollie, T-Mobile, Sony Interactive Entertainment
+
+When scraping, add explicit queries for these company career pages, e.g. `site:boards.greenhouse.io "Tesla" data analyst`.
 
 ## Location Filter
 
-When evaluating results, verify the job location is within reasonable commute distance from your home. Define acceptable areas:
-- [YOUR_CITY] and surrounding areas
-- [ACCEPTABLE_AREA_1]
-- [ACCEPTABLE_AREA_2]
-- [BORDERLINE_AREA] (borderline - ~X min by transit)
-- [TOO_FAR_AREA] (too far)
+Harsh is open to relocating anywhere in the US, so there is no strict commute filter. Instead, weight postings by realistic H1B sponsorship likelihood:
+- **Ideal:** Large tech hubs with strong sponsorship track records (SF Bay Area, Seattle, NYC, Austin) and fully remote roles at companies with a sponsorship history
+- **Acceptable:** Other major metros (Chicago, Denver, Boston, Dallas) at mid-size or larger companies
+- **Borderline:** Smaller companies or markets with no clear sponsorship history; flag for manual verification before applying
+- **Too far:** Not location-based here; instead, treat "explicitly states no sponsorship" as the equivalent of "too far" (skip)
 
 ## Date Filter
 
@@ -73,4 +80,5 @@ Only include jobs posted within the last 14 days, or with an application deadlin
 ## Adapting Queries
 
 If the user specifies a focus area, select queries from the matching category and also generate 2-3 custom queries for that focus. For example:
-- "/scrape [focus_area]" -> relevant category queries + custom focus-specific queries
+- "/scrape data engineer" -> Priority 2 queries + custom data-engineer-specific queries
+- "/scrape [company name]" -> direct career-page search for that company plus a sponsorship-history check

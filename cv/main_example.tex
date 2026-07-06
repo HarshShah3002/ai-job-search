@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - Harsh Tarang Shah
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -19,23 +18,24 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
+\usepackage{needspace}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Harsh Tarang Shah - CV},
     pdfpagemode=FullScreen,
 }
 \usepackage[scale=0.80]{geometry}
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Harsh}{Shah}
+\address{College Station, TX, USA}{}{}
+\phone[mobile]{+1 (979) 422-1517}
+\email{harsh.shah@tamu.edu}
+\extrainfo{\href{https://www.linkedin.com/in/harshshah3002}{LinkedIn}, \href{https://github.com/HarshShah3002}{GitHub}, \href{https://harshtshah.vercel.app}{Portfolio}}
 
 \begin{document}
 
@@ -46,7 +46,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{Business Analytics MS graduate (Texas A\&M University) with hands-on experience turning raw data into decision-ready dashboards and recommendations. Built an end-to-end retail analytics pipeline on 1M+ transaction records (RFM segmentation, Market Basket Analysis, GenAI-powered Streamlit dashboard) and shipped GitHub-workflow automation and KPI dashboards during a product management internship that measurably improved sprint completion. Strong in SQL, Python, Tableau, and Power BI, with an engineering-to-business pivot narrative and a bias toward shipping working tools, not just reports.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +56,15 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Data Analysis \& Visualization}: SQL, Python (pandas), Tableau, Power BI, EDA, A/B testing
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{Data Engineering}: ETL pipeline design (Python, MySQL), GitHub API automation, workflow automation (JavaScript, GitHub Actions)
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Machine Learning}: Classification (LDA, QDA, KNN), regression (Ridge), computer vision (Mediapipe, Movenet), RFM segmentation, Market Basket Analysis
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Product \& Program Operations}: PRD writing, roadmap prioritization from data, sprint/KPI tracking, Scrum (PSM I certified)
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Tools \& Platforms}: AWS, Streamlit, Jira, Notion, Google Analytics, Gemini API / OpenRouter
 
 \end{itemize}
 
@@ -76,32 +76,43 @@
 \vspace{3pt}
 \begin{itemize}
 
-% --- Most Recent Role ---
-\item{\cventry{[YYYY--Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Current Role ---
+\needspace{5\baselineskip}
+\item{\cventry{2025--Present}{Program Operations Management Assistant}{Texas A\&M University, Dept. of Nutrition \& Food Science}{College Station, TX}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1 - be specific, use numbers where possible]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
-    \item [Achievement or responsibility 4]
+    \item Support program operations for the department alongside MS coursework
+    \item Contributing to a faculty research project analyzing EmotiBit wearable physiological sensor data for real-time adaptive cobot behavior
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Previous Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Product Management Intern ---
+\needspace{5\baselineskip}
+\item{\cventry{2024}{Product Management Intern}{Staytuned LLP}{Ahmedabad, India}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
-    \item [Achievement or responsibility 3]
+    \item Led a cross-functional team of 6 to automate GitHub workflows (JavaScript, GitHub Actions), writing PRDs and cutting a 10-step manual process to 2, saving 15+ developer hours weekly
+    \item Built an intelligent GitHub API issue-management system auto-categorizing 180+ monthly issues, cutting mean-time-to-resolution for P0/P1 issues from 48 to 29 hours (40\% reduction)
+    \item Mined GitHub metrics (PR cycle time, sprint velocity) in Python and SQL, building a Tableau dashboard tracking 8 KPIs that surfaced 3 bottlenecks and increased sprint completion by 26\%
 \end{itemize}}}
 
 \vspace{3pt}
 
-% --- Earlier Role ---
-\item{\cventry{[YYYY--YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+% --- Software Engineer Intern ---
+\needspace{5\baselineskip}
+\item{\cventry{2023}{Software Engineer Intern}{TYSU Infotech Pvt. Ltd.}{Ahmedabad, India}{}{\vspace{1pt}
 \begin{itemize}
-    \item [Achievement or responsibility 1]
-    \item [Achievement or responsibility 2]
+    \item Redesigned 8 core user-facing screens based on qualitative feedback analysis, driving a 40\% engagement boost and 25\% drop-off reduction
+    \item Used SQL to identify homepage accessibility gaps and validated fixes via A/B testing, improving accessibility by 55\%
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Data Analyst Intern ---
+\needspace{5\baselineskip}
+\item{\cventry{2022}{Data Analyst Intern}{Innodel Technologies Pvt. Ltd.}{Ahmedabad, India}{}{\vspace{1pt}
+\begin{itemize}
+    \item Built a Tableau dashboard on cardiovascular illness trends to help providers identify high-risk patient segments
+    \item Analyzed a 500K+ row Netflix dataset in Tableau, delivering 4 actionable content-personalization recommendations
 \end{itemize}}}
 
 \end{itemize}
@@ -114,16 +125,29 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
+\needspace{5\baselineskip}
+\item{\cventry{2024--2026}{MS Engineering Management, Business Analytics Specialization}{Texas A\&M University}{College Station, TX}{}{\vspace{1pt}
+GPA: 3.7/4. Coursework: Management of Engineering Systems, Data Analysis, Marketing, System Analysis \& Design.
 }}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY--YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
+\item{\cventry{2020--2024}{B.Tech Electronics \& Communication Engineering}{Pandit Deendayal Energy University}{Gandhinagar, India}{}{\vspace{1pt}
+GPA: 4/4. Coursework: Object Oriented Programming, Data Mining, Machine Learning, Python Programming.
 }}
 
+\end{itemize}
+
+% ============================================================
+%     PROJECTS
+% ============================================================
+
+\section{Selected Projects}
+\vspace{1pt}
+\begin{itemize}
+\item \textbf{ShopSense: Market Intelligence Analysis} -- End-to-end retail analytics pipeline (Python, MySQL) on 1M+ transaction records; RFM segmentation and Market Basket Analysis; Streamlit dashboard with GenAI insights (Gemini 2.5 Flash). \href{https://harsh-retail-analytics-project.streamlit.app}{Live demo}
+\item \textbf{Predictive Modeling for Concrete Strength} -- Predictive analytics dashboard (Ridge Regression, Decision Tree, LDA/QDA/KNN) with real-time GenAI-powered mix-design recommendations
+\item \textbf{Yoga Pose Detection (Computer Vision)} -- Real-time pose detection (Mediapipe, Movenet) achieving 95.4-98.7\% accuracy across a 6,000-image dataset
 \end{itemize}
 
 % ============================================================
@@ -133,27 +157,19 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item [Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).
+\item English (fluent), Hindi (native), Gujarati (native)
 \end{itemize}
 
 % ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item [Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
+%     HONORS AND AWARDS
 % ============================================================
 
 \section{Honors and Awards}
 \vspace{1pt}
 \begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item{\textbf{Professional Scrum Master I (PSM I)} -- Scrum.org}
+\item{\textbf{Engineering Project Management Certification} -- Texas A\&M University}
+\item{\textbf{Top 1\% Scorer, Understanding Incubation and Entrepreneurship} -- IIT Bombay}
 \end{itemize}
 
 % ============================================================

@@ -16,9 +16,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** SQL, Python, data analysis and visualization, Tableau, Power BI, dashboarding, A/B testing
+**Moderate match areas:** JavaScript automation, GitHub API integration, machine learning (classification, regression, computer vision), ETL pipeline building
+**Weak match areas:** Large-scale/production data engineering infrastructure (Spark, distributed systems, enterprise-scale data platforms), cloud-native data engineering at production scale
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -30,9 +30,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Data analyst, BI analyst, product/program operations, retail and product analytics
+**Moderate:** Data engineer (project-scale ETL, not production-scale), technical product manager, analytics engineer
+**Entry-level:** Roles requiring multiple years of production data engineering or senior technical leadership
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -46,10 +46,11 @@ Does the role and company culture match the behavioral profile?
 
 **Red flags to research:** Department disorganization, work dominated by maintenance over development, poor chemistry with leadership, culture mismatches. Check reviews, media coverage, LinkedIn connections, and network contacts for insider perspective.
 
-### 4. Location & Logistics (Pass/Fail + Notes)
-- Within commute range: PASS
-- Remote with occasional office: PASS
-- Requires relocation: FAIL (deal-breaker)
+### 4. Location & Logistics + H1B Sponsorship (Pass/Fail + Notes)
+- Anywhere in the US: PASS (open to relocation)
+- Remote: PASS
+- **H1B sponsorship is the binding constraint, not location.** Check the posting and company history for sponsorship signals: explicit "will sponsor" language, company size/history of H1B filings (larger tech and well-funded startups are more likely), or explicit "no sponsorship" language (FAIL/deal-breaker)
+- If sponsorship status is unclear from the posting, flag it for the user to verify (e.g. via myvisajobs.com or the USCIS H1B Employer Data Hub) rather than assuming either way
 - Frequent international travel: FLAG (discuss with user)
 
 ### 5. Career Alignment & Motivation (0-100)
@@ -63,19 +64,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Land a full-time data analyst, data engineer, BI analyst, or technical product manager role with realistic H1B sponsorship
+- Build toward larger-scale data engineering and analytics engineering skills over the next few years
+- Keep the pivot narrative (engineering background into business-facing data/product) consistent across applications
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: building a pipeline or dashboard end to end, automating a repetitive workflow, turning raw data into a clear recommendation
+- Tasks that drain: pure maintenance work with no room to build or improve, rigid processes with little ownership
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Actively job searching post-graduation (May 2026); needs a role that can realistically sponsor H1B on a normal timeline
+- **Flexibility**: Open to relocating anywhere in the US; no commute constraint
+- **Professional development**: Wants to grow from project-scale data work into production-scale data engineering/analytics engineering over time
 
 ### 6. Salary Benchmark (Optional)
 

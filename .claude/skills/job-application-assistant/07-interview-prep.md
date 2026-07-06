@@ -12,26 +12,33 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 1. Staytuned GitHub Workflow Automation (Ownership / Process Improvement)
+**S:** The team at Staytuned LLP was manually triaging and labeling GitHub issues and PRs, a 10-step manual process that consumed significant developer time every week.
+**T:** As Product Management Intern, Harsh was responsible for identifying the bottleneck and leading a fix across a cross-functional team of 6.
+**A:** Wrote PRDs and led the team to build automation using JavaScript and GitHub Actions, plus an intelligent issue-categorization system on the GitHub API that auto-sorted 180+ monthly issues by priority and type.
+**R:** Cut the manual process from 10 steps to 2, saved 15+ developer hours weekly, and cut mean-time-to-resolution for P0/P1 issues from 48 to 29 hours (40% reduction).
+**Use for:** "Tell me about a time you improved a process", "Describe a time you led a team"
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 2. ShopSense Retail Analytics Pipeline (End-to-End Data Ownership)
+**S:** Wanted to demonstrate the full data-to-decision pipeline, from raw transactional data to a usable business tool, as an independent project.
+**T:** Design and build an end-to-end analytics system covering data engineering, statistical analysis, and a stakeholder-facing product.
+**A:** Built an ETL pipeline in Python and MySQL on 1M+ transaction records, applied RFM segmentation and Market Basket Analysis to find customer cohorts and product associations, then built a Streamlit dashboard with GenAI-powered insights (Gemini 2.5 Flash) and deployed it publicly.
+**R:** Delivered a fully deployed, working analytics product (harsh-retail-analytics-project.streamlit.app) that turns raw transactions into segmentation and cross-sell recommendations.
+**Use for:** "Walk me through a data project end to end", "How do you approach an ambiguous, open-ended problem"
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 3. TYSU Infotech Accessibility Improvement (Data-Driven Decision Making)
+**S:** The company's product had unaddressed accessibility gaps affecting user conversion, but the root causes weren't clearly identified.
+**T:** As Software Engineer Intern, identify the actual gaps using data rather than guesswork, and validate any fix before shipping it.
+**A:** Queried the company database with SQL to pinpoint homepage accessibility issues, then implemented data-driven design changes and validated them through A/B testing and user surveys.
+**R:** Improved accessibility by 55%, alongside a broader UI overhaul that lifted engagement by 40% and cut drop-off by 25%.
+**Use for:** "Tell me about a time you used data to make a decision", "Describe a time you validated an assumption before committing to it"
+
+### 4. Yoga Pose Detection Computer Vision Project (Technical Depth / Iteration)
+**S:** Wanted to build a real-time computer vision system as a personal technical deep-dive into ML model performance under real-world variation.
+**T:** Build an accurate, real-time pose detection system that holds up across different lighting and camera angles.
+**A:** Built the system using Mediapipe and Movenet with multi-joint key point tracking, then iteratively fine-tuned and applied data augmentation across a 6,000-image dataset covering varied lighting and angle scenarios.
+**R:** Achieved 95.4-98.7% detection accuracy and cut the false detection rate by 22%.
+**Use for:** "Tell me about a technically challenging project", "How do you iterate on a model that isn't performing well"
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 

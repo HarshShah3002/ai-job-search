@@ -105,12 +105,14 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Data Analyst / BI Analyst roles:**
+> Business Analytics MS graduate (Texas A&M) with hands-on experience turning raw data into decision-ready dashboards and recommendations. Built an end-to-end retail analytics pipeline on 1M+ transaction records (RFM segmentation, Market Basket Analysis, GenAI-powered Streamlit dashboard) and delivered KPI dashboards in prior internships that directly improved sprint completion and accessibility metrics. Strong in SQL, Python, Tableau, and Power BI, with a track record of shipping analysis that gets used, not just reports that get read.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For Data Engineer / Analytics Engineer roles:**
+> Business Analytics MS graduate with project-scale ETL and pipeline experience across Python, SQL, and MySQL, including a retail analytics pipeline processing 1M+ transaction records and automation work on the GitHub API that cut manual workflow steps by 80%. Comfortable working from raw, messy data to a deployed, queryable dataset and building the automation that keeps it that way. Looking to grow these fundamentals into production-scale data engineering.
+
+**For Technical Product Manager / Product roles:**
+> Product Management intern turned Business Analytics MS graduate, with direct experience writing PRDs, automating engineering workflows, and using data (GitHub metrics, Tableau dashboards) to drive roadmap decisions that measurably improved sprint completion. Combines an engineering background with product and business analytics training, giving him fluency on both sides of the technical/business handoff.
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.
